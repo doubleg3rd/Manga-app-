@@ -1,0 +1,40 @@
+mport android.widget.EditText;
+import android.widget.TextView;
+import android.content.Intent;
+import android.os.Bundle;
+
+
+public class mind extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_mind);
+
+        Intent i = getIntent();
+        String message = i.getStringExtra("cool");
+        ((TextView)findViewById(R.id.DUN)).setText(message);
+
+
+
+    }
+    public void hope(View v)
+    {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+    }
+public void set(View v)
+{
+    Intent i = new Intent(this,setting.class);
+    startActivity(i);
+}
+public void dd(View v){
+        Intent i = new Intent(this, dbz.class);
+        startActivity(i);
+}
+public void sup(View v)
+{
+    Intent i = new Intent( this,support.class);
+    startActivity(i);
+}
+}
